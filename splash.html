@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Screen</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="splash-content">
+        <div class="splash-logo">Aplikasi Saya</div>
+        <p>Selamat datang di aplikasi kami!</p>
+        <div class="loader"></div>
+        <p>Menunggu...</p>
+    </div>
+    <script>
+        setTimeout(function() {
+            window.location.href = 'login.html';
+        }, 3000);
+    </script>
+</body>
+</html>

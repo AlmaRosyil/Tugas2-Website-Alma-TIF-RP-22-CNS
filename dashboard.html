@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profil</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pengaturan
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Pengguna</a>
+                        <a class="dropdown-item" href="#">Keamanan</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Lainnya</a>
+                    </div>
+                </li>
+            </ul>
+            <a href="login.html" class="btn btn-danger">Logout</a>
+        </div>
+    </nav>
+    
+    <div class="container mt-4 text-center">
+        <h2 id="welcomeMessage">Selamat Datang di Dashboard</h2>
+        <p>adalah halaman dashboard Anda.</p>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card custom-card text-center shadow-lg position-relative">
+                    <div class="card-icon bg-primary text-white">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <img src="https://via.placeholder.com/150" class="card-img-top rounded-circle mx-auto mt-5" alt="Foto Pengguna" style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff;">
+                    <div class="card-body">
+                        <h5 class="card-title" id="cardUsername">John Doe</h5>
+                        <p class="card-subtitle mb-2 text-muted">Administrator</p>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a href="#" class="btn btn-primary btn-sm mt-3 px-4">Lihat Profil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const username = localStorage.getItem('username');
+        if (username) {
+            document.getElementById('welcomeMessage').innerText = `Selamat Datang, ${username} di Dashboard`;
+            document.getElementById('cardUsername').innerText = username;
+        } else {
+            window.location.href = 'login.html'; 
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
